@@ -4,7 +4,7 @@ import {
   //@ts-ignore
 } from "react-devtools-inline/backend"
 //@ts-ignore
-import { initialize as initializeFrontend } from "react-devtools-inline/frontend"
+import { initialize as initializeFrontend } from "./components/frontend"
 
 import { showDevtoolsWarning } from "./warning"
 
