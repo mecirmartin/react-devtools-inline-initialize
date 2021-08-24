@@ -25,7 +25,6 @@ if (window.__REACT_DEVTOOLS_GLOBAL_HOOK__?.renderers.size === 0) {
 
 const store = new Store()
 window.addEventListener("message", ({ data }) => {
-  console.log("OPERACIA", data)
   if (data.event === "operations") {
     store.onBridgeOperations(data.payload)
     const devtoolsTree = store._idToElement
