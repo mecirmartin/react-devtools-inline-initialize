@@ -11,7 +11,7 @@ import {
   ElementTypeForwardRef,
   ElementTypeFunction,
   ElementTypeMemo,
-} from "./util"
+} from './util'
 
 const separateDisplayNameAndHOCs = (
   displayName: string | null | undefined,
@@ -28,7 +28,7 @@ const separateDisplayNameAndHOCs = (
     case ElementTypeForwardRef:
     case ElementTypeFunction:
     case ElementTypeMemo:
-      if (displayName!.indexOf("(") >= 0) {
+      if (displayName!.indexOf('(') >= 0) {
         const matches = displayName!.match(/[^()]+/g)
         if (matches != null) {
           displayName = matches.pop()
@@ -42,15 +42,15 @@ const separateDisplayNameAndHOCs = (
 
   if (type === ElementTypeMemo) {
     if (hocDisplayNames === null) {
-      hocDisplayNames = ["Memo"]
+      hocDisplayNames = ['Memo']
     } else {
-      hocDisplayNames.unshift("Memo")
+      hocDisplayNames.unshift('Memo')
     }
   } else if (type === ElementTypeForwardRef) {
     if (hocDisplayNames === null) {
-      hocDisplayNames = ["ForwardRef"]
+      hocDisplayNames = ['ForwardRef']
     } else {
-      hocDisplayNames.unshift("ForwardRef")
+      hocDisplayNames.unshift('ForwardRef')
     }
   }
 
@@ -340,7 +340,7 @@ export class Store {
 
             let parentElement = null
             if (parentID === 0) {
-              this._roots = this._roots.filter(rootID => rootID !== id)
+              this._roots = this._roots.filter((rootID) => rootID !== id)
               this._rootIDToRendererID.delete(id)
               this._rootIDToCapabilities.delete(id)
 
@@ -395,7 +395,7 @@ export class Store {
 
           this._rootIDToCapabilities.delete(id)
           this._rootIDToRendererID.delete(id)
-          this._roots = this._roots.filter(rootID => rootID !== id)
+          this._roots = this._roots.filter((rootID) => rootID !== id)
           this._weightAcrossRoots -= root.weight
           break
         }

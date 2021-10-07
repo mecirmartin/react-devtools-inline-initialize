@@ -1,12 +1,12 @@
 export const showDevtoolsWarning = () => {
-  const el = document.createElement("div")
-  el.className = "iteria-ignore"
-  el.id = "devtools-warning"
-  el.style.position = "absolute"
-  el.style.zIndex = "100000"
-  el.style.width = "100%"
-  el.style.height = "10%"
-  el.style.backgroundColor = "#ff9800"
+  const el = document.createElement('div')
+  el.className = 'iteria-ignore'
+  el.id = 'devtools-warning'
+  el.style.position = 'absolute'
+  el.style.zIndex = '100000'
+  el.style.width = '100%'
+  el.style.height = '10%'
+  el.style.backgroundColor = '#ff9800'
   el.innerHTML = innerHtml
   document.body.prepend(el)
 }
